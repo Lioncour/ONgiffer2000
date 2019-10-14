@@ -16,7 +16,7 @@ async function sendtoslack(){
     const data = {
         channel: '#homm3',
         username: 'Heroes Turn Helper',
-        text: "teksttest",
+        text: "teksttddest",
         icon_emoji: ':homm3:',
         attachments: [
             {
