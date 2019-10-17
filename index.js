@@ -3,8 +3,7 @@ const express = require('express')
 const axios = require('axios')
 const app = express()
 const port = 3000
-const bodyParser = require("body-parser");
-app.use(bodyParser);
+app.use(express.json())
 
 app.post('/', (req, res) => {
     console.log("User searched for: " + req.body.text);
