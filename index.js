@@ -6,7 +6,7 @@ const port = 3000
 app.use(express.urlencoded())
 app.use(express.static('giffer'))
 const gifs = {
-    "techlead":"http://157.245.106.185/giffer/KIM.gif"
+    "techlead":"http://157.245.106.185:3000/KIM.gif"
 
 }
 app.post('/', (req, res) => {
