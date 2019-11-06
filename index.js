@@ -17,19 +17,21 @@ app.post('/', (req, res) => {
 
 function textToURL(text) {
     if (gifs.hasOwnProperty(text)) {
-        return gifs[text]
+        return {
+            "image_url": gifs[text],
+        }
     } else {
-        return "Dissa kan giffes:" + Object.keys(gifs)
+        return {
+            "text": "Dissa kan giffes:" + Object.keys(gifs),
+        }
     }
 }
 
-function sendtoslack(url){
+function sendtoslack(content){
     const data = {
         response_type: "in_channel",
         attachments: [
-            {
-                "image_url": url,
-            }
+            content
         ]        
       };
 
