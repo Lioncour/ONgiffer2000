@@ -4,7 +4,10 @@ const axios = require('axios')
 const app = express()
 const port = 3000
 app.use(express.urlencoded())
+const gifs = {
+    "techlead":"https://media.giphy.com/media/RtsDw93ouK74Y/giphy.gif"
 
+}
 app.post('/', (req, res) => {
     console.log("User searched for: " + req.body.text);
     let url = textToURL(req.body.text)
@@ -13,12 +16,11 @@ app.post('/', (req, res) => {
 })
 
 function textToURL(text) {
-    switch (text) {
-        case "techlead":
-            return "https://media.giphy.com/media/RtsDw93ouK74Y/giphy.gif"
-        default:
-            return "https://media.giphy.com/media/8EmeieJAGjvUI/giphy.gif"
-        }
+    if (gifs.hasOwnProperty(text)) {
+        return gifs[text]
+    } else {
+        return "Dissa kan giffes:" + Object.keys(gifs)
+    }
 }
 
 function sendtoslack(url){
