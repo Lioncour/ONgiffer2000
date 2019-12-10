@@ -7,18 +7,17 @@ app.use(express.urlencoded())
 app.use(express.static('giffer'))
 const gifs = {
     "lett":"http://157.245.106.185:3000/20kglett.gif",
-    "backend":"http://157.245.106.185:3000/backend.gif",
+    "backend":"http://157.245.106.185:3000/techlead.gif",
     "brukervennlig":"http://157.245.106.185:3000/brukervennlig.gif",
     "bukseseler":"http://157.245.106.185:3000/bukseseler.gif",
-    "danse":"http://157.245.106.185:3000/danse.gif",
+    "danse":"http://157.245.106.185:3000/dans.gif",
     "frontend":"http://157.245.106.185:3000/frontend.gif",
     "hitman":"http://157.245.106.185:3000/hitman.gif",
     "ios":"http://157.245.106.185:3000/ios.gif",
-    "kaffe":"http://157.245.106.185:3000/Kaffe.gif",
+    "kaffe":"http://157.245.106.185:3000/kaffe.gif",
     "oppfinner":"http://157.245.106.185:3000/oppfinner.gif",
-    "ungdom":"http://157.245.106.185:3000/Ungdom.gif"
+    "ungdom":"http://157.245.106.185:3000/ungdom.gif"
     
-
 }
 app.post('/', (req, res) => {
     console.log("User searched for: " + req.body.text);
