@@ -33,7 +33,7 @@ function textToURL(text) {
         }
     } else {
         return {
-            "text": "Dissa kan giffes:" + Object.keys(gifs),
+            "text": "Dissa kan giffes:" + Object.keys(gifs).join('\n'),
         }
     }
 }
