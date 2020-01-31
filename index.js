@@ -16,10 +16,10 @@ const gifs = {
     "ios":"http://157.245.106.185:3000/ios.gif",
     "kaffe":"http://157.245.106.185:3000/kaffe.gif",
     "oppfinner":"http://157.245.106.185:3000/oppfinner.gif",
-    "ungdom":"http://157.245.106.185:3000/ungdom.gif"
-    "alko":"http://157.245.106.185:3000/alko.gif"
-    "kos":"http://157.245.106.185:3000/kos.gif"
-    "gimse":"http://157.245.106.185:3000/gimse.gif"
+    "ungdom":"http://157.245.106.185:3000/ungdom.gif",
+    "alko":"http://157.245.106.185:3000/alko.gif",
+    "kos":"http://157.245.106.185:3000/kos.gif",
+    "gimse":"http://157.245.106.185:3000/gimse.gif",
 }
 app.post('/', (req, res) => {
     console.log("User searched for: " + req.body.text);
