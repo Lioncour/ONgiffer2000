@@ -20,6 +20,7 @@ const gifs = {
     "alko":"http://157.245.106.185:3000/alko.gif",
     "kos":"http://157.245.106.185:3000/kos.gif",
     "gimse":"http://157.245.106.185:3000/gimse.gif",
+    "okr":"http://157.245.106.185:3000/okr.gif",
 }
 app.post('/', (req, res) => {
     console.log("User searched for: " + req.body.text);
