@@ -21,6 +21,9 @@ const gifs = {
   gimse: 'http://157.245.106.185:3000/gimse.gif',
   okr: 'http://157.245.106.185:3000/okr.gif',
 };
+
+app.use(express.static(__dirname + '/giffer'));
+
 app.post('/', (req, res) => {
   console.log('User searched for: ' + req.body.text);
   let url = textToURL(req.body.text, req.body.thread_ts);
