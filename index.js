@@ -5,21 +5,21 @@ const port = process.env.PORT || 5000;
 app.use(express.urlencoded());
 app.use(express.static('giffer'));
 const gifs = {
-  lett: 'http://157.245.106.185:3000/20kglett.gif',
-  backend: 'http://157.245.106.185:3000/techlead.gif',
-  brukervennlig: 'http://157.245.106.185:3000/brukervennlig.gif',
-  bukseseler: 'http://157.245.106.185:3000/bukseseler.gif',
-  danse: 'http://157.245.106.185:3000/dans.gif',
-  frontend: 'http://157.245.106.185:3000/frontend.gif',
-  hitman: 'http://157.245.106.185:3000/hitman.gif',
-  ios: 'http://157.245.106.185:3000/ios.gif',
-  kaffe: 'http://157.245.106.185:3000/kaffe.gif',
-  oppfinner: 'http://157.245.106.185:3000/oppfinner.gif',
-  ungdom: 'http://157.245.106.185:3000/ungdom.gif',
-  alko: 'http://157.245.106.185:3000/alko.gif',
-  kos: 'http://157.245.106.185:3000/kos.gif',
-  gimse: 'http://157.245.106.185:3000/gimse.gif',
-  okr: 'http://157.245.106.185:3000/okr.gif',
+  lett: 'https://ongiffer.herokuapp.com/20kglett.gif',
+  backend: 'https://ongiffer.herokuapp.com/techlead.gif',
+  brukervennlig: 'https://ongiffer.herokuapp.com/brukervennlig.gif',
+  bukseseler: 'https://ongiffer.herokuapp.com/bukseseler.gif',
+  danse: 'https://ongiffer.herokuapp.com/dans.gif',
+  frontend: 'https://ongiffer.herokuapp.com/frontend.gif',
+  hitman: 'https://ongiffer.herokuapp.com/hitman.gif',
+  ios: 'https://ongiffer.herokuapp.com/ios.gif',
+  kaffe: 'https://ongiffer.herokuapp.com/kaffe.gif',
+  oppfinner: 'https://ongiffer.herokuapp.com/oppfinner.gif',
+  ungdom: 'https://ongiffer.herokuapp.com/ungdom.gif',
+  alko: 'https://ongiffer.herokuapp.com/alko.gif',
+  kos: 'https://ongiffer.herokuapp.com/kos.gif',
+  gimse: 'https://ongiffer.herokuapp.com/gimse.gif',
+  okr: 'https://ongiffer.herokuapp.com/okr.gif',
 };
 
 app.use(express.static(__dirname + '/giffer'));
