@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 });
 
 function textToURL(text) {
-  gifs.hasOwnProperty(text)
+  return gifs.hasOwnProperty(text)
     ? { image_url: gifs[text] }
     : { text: 'Dissa kan giffes:' + Object.keys(gifs).join('\n') };
 }
