@@ -22,6 +22,7 @@ const gifs = {
   kos: 'https://ongiffer.herokuapp.com/kos.gif',
   gimse: 'https://ongiffer.herokuapp.com/gimse.gif',
   okr: 'https://ongiffer.herokuapp.com/okr.gif',
+  teamwork: 'https://ongiffer.herokuapp.com/teamwork.gif',
 };
 
 app.use(express.static(__dirname + '/giffer'));
