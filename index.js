@@ -2,8 +2,10 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 5000;
+
 app.use(express.urlencoded());
 app.use(express.static('giffer'));
+
 const gifs = {
   lett: 'https://ongiffer.herokuapp.com/20kglett.gif',
   backend: 'https://ongiffer.herokuapp.com/techlead.gif',
@@ -35,16 +37,11 @@ app.get('/', (req, res) => {
 });
 
 function textToURL(text) {
-  if (gifs.hasOwnProperty(text)) {
-    return {
-      image_url: gifs[text],
-    };
-  } else {
-    return {
-      text: 'Dissa kan giffes:' + Object.keys(gifs).join('\n'),
-    };
-  }
+  gifs.hasOwnProperty(text)
+    ? { image_url: gifs[text] }
+    : { text: 'Dissa kan giffes:' + Object.keys(gifs).join('\n') };
 }
+
 function sendtoslack(content, thread) {
   const data = {
     response_type: 'in_channel',
@@ -53,4 +50,5 @@ function sendtoslack(content, thread) {
   };
   return data;
 }
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
