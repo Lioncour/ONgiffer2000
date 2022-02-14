@@ -22,7 +22,7 @@ const gifs = {
   kos: 'https://ongiffer.herokuapp.com/kos.gif',
   gimse: 'https://ongiffer.herokuapp.com/gimse.gif',
   okr: 'https://ongiffer.herokuapp.com/okr.gif',
-  teamwork: 'https://ongiffer.herokuapp.com/teamwork.gif',
+  sus: 'https://ongiffer.herokuapp.com/teamwork.gif',
 };
 
 app.use(express.static(__dirname + '/giffer'));
@@ -30,7 +30,6 @@ app.use(express.static(__dirname + '/giffer'));
 app.post('/', (req, res) => {
   console.log('User searched for: ' + req.body.text);
   let url = textToURL(req.body.text, req.body.thread_ts);
-  console.log(textToURL(req.body.text, req.body.thread_ts));
   res.send(sendtoslack(url));
 });
 
